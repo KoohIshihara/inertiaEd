@@ -1,0 +1,45 @@
+module-section5
+  div.wrap-module
+    atom-h2(content='作品をつくる').mb20
+    item-paragraph(content='{paragraphs1}').mb40
+    item-iframe(content='https://www.openprocessing.org/sketch/481711/embed/').mb40
+    item-paragraph(content='{paragraphs2}').mb40
+    item-img(content='{img1}').mb40
+    //img(src='./img/three-point-perspective.png')
+    item-paragraph(content='{paragraphs3}').mb40
+
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-module {
+        width: 90%;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.paragraphs1 = [
+      'さて、これまで習ったことを主に用いて作品をつくっていきましょう。例えば、次のようなプログラムで三点透視図法を利用した作品をつくることができます。',
+    ];
+
+    this.paragraphs2 = [
+      '三点透視図法とは、3個の消失点と3本の消失線を持つ透視図で3方向に収束してしくグラフィックを作図するための方法です。デザインや建築において物体の構造を把握するための手法としてよく利用されます。',
+    ];
+
+    this.img1 = {
+      title: '三点透視図法',
+      src: './img/three-point-perspective.png',
+    }
+
+    this.paragraphs3 = [
+      '他にも、1点透視図法や2点透視図法があります3点より多い消失点を用いた図法はあまり一般的ではありません。しかし、そこに発見があるかもしれませんね。',
+      '例えば、ダブルネガティブという建築デザインを主軸にしたアーティストグループがあります。彼らはハエやトンボなど複眼を持つ昆虫の視る世界を探求するため、独自の図法を開拓しました。',
+      '私たちがみている世界だけが全てではありません。私たちはプログラム（サイエンス）の力を借りてまだ視たことのない世界を視ることができます。',
+      'ようこそ、Art&Scienceの世界へ。これからもっと深くプログラムを学び、作品の創作を通して新しい世界を覗いて見ましょう。',
+    ];

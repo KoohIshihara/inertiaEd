@@ -1,0 +1,17 @@
+item-iframe
+  iframe(src='{opts.content}')
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      iframe {
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+      }
+      @media only screen and (max-width : 600px) {
+        iframe {
+          height: 400px;
+        }
+      }
+    }

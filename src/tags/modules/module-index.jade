@@ -1,0 +1,53 @@
+module-index
+  div.wrap-module
+    atom-h2(content='目次')
+    ul
+      li(each='{item in lists}', data-sec='{ item.data }').scroll.mb12 { item.label }
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-module {
+        width: 90%;
+        max-width: 880px;
+        margin: 0 auto;
+        ul {
+          padding: 20px 48px;
+          li {
+            color: #2a2a2a;
+            list-style: upper-roman;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    // this.lists = ['ピクセル','座標系','直線を描く','setupとdraw','作品をつくる'];
+
+    this.lists = [
+      {label:'ピクセル', data:'module-section1'},
+      {label:'座標系', data:'module-section2'},
+      {label:'直線を描く', data:'module-section3'},
+      {label:'setupとdraw', data:'module-section4'},
+      {label:'作品をつくる', data:'module-section5'},
+    ];
+
+    this.scroll = function(e) {
+      alert();
+      var query = e.currentTarget.dataset.sec;
+      var d = getit.toScroll(query);
+    };
+
+    this.on('update', function(){
+      $('.scroll').click(function(e) {
+        var query = e.currentTarget.dataset.sec;
+        var d = TO_SCROLL.toScroll(query);
+      });
+    });
+
+    

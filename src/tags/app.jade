@@ -1,0 +1,25 @@
+app
+  //a(href="#page-test") testlink
+  //a(href="#members/kooh") menbers link
+  content
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      @media only screen and (max-width : 600px) {
+        
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    var mdRender = function(){
+      var content = document.getElementById('app');
+      content.innerHTML = marked(content.innerHTML);
+    }
+    
+    this.on('update', function(){
+      mdRender();
+    });

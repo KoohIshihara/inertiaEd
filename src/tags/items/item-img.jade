@@ -1,0 +1,17 @@
+item-img
+  p.mb12 { opts.content.title }
+  img(src='{opts.content.src}')
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      p {
+        font-weight: 500;
+      }
+      img {
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: #000 1px 1px 8px -2px;
+      }
+    }

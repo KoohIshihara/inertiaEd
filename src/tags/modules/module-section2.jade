@@ -1,0 +1,31 @@
+module-section2
+  div.wrap-module
+    atom-h2(content='座標系').mb20
+    item-paragraph(content='{paragraphs1}').mb40
+    item-img(content='{img1}')
+
+     
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-module {
+        width: 90%;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.paragraphs1 = [
+      '実はディスプレイの座標系は中高の数学で学ぶ座標系とは違います。x軸方向は右に進むほど増えますが、y軸方向は下に進むほど増えます。中高の数学は下に進むほど値が減ることが多いですよね。でもディスプレイの中では反対です。',
+      '原点の位置も違います。中高の数学では真ん中のことが多いですが、ディスプレイの原点は左上です。青色のピクセルと赤色のピクセルは前者のy座標の方が大きいのに、下側に来ています。それは、この座標系のためですね。',
+    ];
+
+    this.img1 = {
+      title: '座標系',
+      src: './img/about-axis.jpg',
+    }

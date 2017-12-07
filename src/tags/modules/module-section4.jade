@@ -1,0 +1,29 @@
+module-section4
+  div.wrap-module
+    atom-h2(content='setupとdraw').mb20
+    item-paragraph(content='{paragraphs1}').mb40
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-module {
+        width: 90%;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.paragraphs1 = [
+      '先ほどのプログラムを実行すると直線がたくさん描かれましたね。`line(0,0,mouseX,mouseY)`は1つしか記述がありません。なのにどうしてたくさん直線が描かれたのでしょうか？',
+      'ここで私たちが知っておくべきことがあります。それは、`function draw(){・・・}`の「`・・・`」は繰り返し実行されるということです。これによって`line(0,0,mouseX,mouseY)`が繰り返し実行されてたくさんの直線が描かれました。',
+      '次に、`stroke(255,0,0,10)`に注目して下さい。最初の`(255,0,0)`は「Red:255,Green:0,Blue:0」をあらわしていて、Redが255で他が0なので赤色になります。最後の10は透明度（Alpha）です。0に近づくほど透明になります。逆に255に近づくほど不透明になります。',
+      '一方で`setup(){・・・}`の「`・・・`」は一度だけ実行されます。このsetupとdrawの違いはとても大事ですから覚えておいてください。',
+      'setup → draw → draw → draw → draw...',
+      '`setup(){}`の中に`createCanvas(windowWidth, windowHeight);`とありますね。このプログラムは私たちのキャンバスの大きさをコンピューターに指定しています。`windowWidth`の大きさは私たちのブラウザウインドウの幅を表しています。`windowHeight`はそれに対して高さを表しています。',
+      '今回は「ブラウザの幅（`windowWidth`）と高さ（`windowHeight`）でキャンバスをつくって下さい。」という意味になります。試しに`createCanvas(800,600);`などとして確かめてみて下さい。',
+    ];

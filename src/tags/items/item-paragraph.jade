@@ -1,0 +1,18 @@
+item-paragraph
+  div.wrap-paragraph
+    atom-p(each='{p in opts.content}' content='{p}')
+    
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-paragraph {
+        
+      }
+    }
+
+  script.
+
+    var self = this;
+

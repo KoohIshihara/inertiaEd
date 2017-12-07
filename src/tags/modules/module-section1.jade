@@ -1,0 +1,40 @@
+module-section1
+  div.wrap-module
+    atom-h2(content='ピクセル').mb20
+    item-paragraph(content='{paragraphs1}').mb40
+    item-iframe(content='https://www.openprocessing.org/sketch/484544/embed/').mb40
+    item-paragraph(content='{paragraphs2}').mb40
+    item-iframe(content='https://www.openprocessing.org/sketch/484550/embed/').mb40
+    item-paragraph(content='{paragraphs3}')
+    
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-module {
+        width: 90%;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.paragraphs1 = [
+      '私たちのコンピュータには様々な付属部品があります。マウスやキーボード、ディストリビューションなどです。このディスプレイが、私たちのキャンバスになります。',
+      'ディスプレイの細かさをみると小さい四角が敷き詰められているのがわかります。野球中継の時に観客席の上部に巨大ディスプレイが見えますね。よく見るとこの巨大ディスプレイにも小さい四角があります。この四角が様々な色に光ってるので遠くから見ると選手に見えます。',
+      'この小さな四角をピクセルと言います。ピクセルは様々な色にひかる四角です。私たちのディスプレイに映るあらゆるものはピクセルで構成されています。Youtubeの映像もLINEの文字も、そしてこれから私たちが学んでいくデジタルアートもすべてピクセルから成り立っています。',
+      'それではopenProcessingを使ってピクセルを光らせる（塗る）ことに挑戦しましょう。簡単ですよ。',
+    ];
+
+    this.paragraphs2 = [
+      'はじめてなのでわからない部分が多いと思いますが、ここで知ってほしいのはディスプレイがピクセルで構成されているということだけです。さて、コードの中身を見てみましょう。（</>マークを押すとコードが表示されます。）',
+      '`set(100,200,R)`の一行に注目して下さい。100と200はピクセルの位置を表しています。100がx座標で200がy座標です。最後のRは色を表しています。今回は`color(255,0,0)`ですので赤になります。では、これらの値を変えてみたりして、以下のようなプログラムを作成してみましょう。',
+    ];
+
+    this.paragraphs3 = [
+      '３つのピクセルが赤、緑、青で塗られました。でもよく見て下さい。なんだか違和感がありませんか？',
+    ];

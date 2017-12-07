@@ -1,0 +1,37 @@
+module-section3
+  div.wrap-module
+    atom-h2(content='直線を描く').mb20
+    item-paragraph(content='{paragraphs1}').mb40
+    item-iframe(content='https://www.openprocessing.org/sketch/484707/embed/').mb40
+    item-paragraph(content='{paragraphs2}').mb40
+    item-iframe(content='https://www.openprocessing.org/sketch/484716/embed/').mb40
+    item-paragraph(content='{paragraphs3}').mb40
+
+  style(scoped, type='less').
+    :scope {
+      display: block;
+      width: 100%;
+      .wrap-module {
+        width: 90%;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+    }
+
+  script.
+
+    var self = this;
+
+    this.paragraphs1 = [
+      '今度は線を描いてみましょう。そのためには次のように記述します。',
+    ];
+
+    this.paragraphs2 = [
+      '直線を描くためには直線の始点と終点が必要ですね。上のプログラムをみて下さい。最初の`(0,0)`が始点で次の`(100,200)`が終点の座標です。つまり「始点`(0,0)`と終点`(100,200)`を結ぶ直線を描いてください。 」というのが上のプログラムの意味になります。このプログラムを変更して任意の始点と終点を結ぶ直線を描いてみて下さい。',
+      '最後に次のようにプログラムを変えてみてください。',
+    ];
+
+    this.paragraphs3 = [
+      '見慣れない文字がいくつかありますね。順番に説明していきます。まず、`mouseX`と`mouseY`に注目して下さい。これはそれぞれマウスのカーソル（矢印）が指し示す位置のx座標とy座標です。',
+      'なので、`line(0,0,mouseX,mouseY)`は「始点`(0,0)`から終点`(mouseX,mouseY)`まで直線を描いてください。」という意味になります。',
+    ];
